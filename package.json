@@ -1,5 +1,5 @@
 {
-    "title": "Agency",
+    "title": "Falcon",
     "name": "startbootstrap-agency",
     "version": "6.0.3",
     "scripts": {
@@ -36,7 +36,8 @@
         "url": "https://github.com/StartBootstrap/startbootstrap-agency.git"
     },
     "dependencies": {
-        "bootstrap": "4.5.3"
+        "bootstrap": "4.5.3",
+        "vue": "^3.0.7"
     },
     "devDependencies": {
         "autoprefixer": "10.0.1",
