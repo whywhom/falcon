@@ -1,53 +1,42 @@
 {
-    "title": "Falcon",
-    "name": "startbootstrap-agency",
-    "version": "6.0.3",
-    "scripts": {
-        "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
-        "build:assets": "node scripts/build-assets.js",
-        "build:pug": "node scripts/build-pug.js",
-        "build:scripts": "node scripts/build-scripts.js",
-        "build:scss": "node scripts/build-scss.js",
-        "clean": "node scripts/clean.js",
-        "start": "npm run build && node scripts/start.js",
-        "start:debug": "npm run build && node scripts/start-debug.js"
+  "name": "falcon",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^7.0.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
     },
-    "description": "Agency is a one page HTML theme for Bootstrap.",
-    "keywords": [
-        "css",
-        "sass",
-        "html",
-        "responsive",
-        "theme",
-        "template"
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
     ],
-    "homepage": "https://startbootstrap.com/theme/agency",
-    "bugs": {
-        "url": "https://github.com/StartBootstrap/startbootstrap-agency/issues",
-        "email": "feedback@startbootstrap.com"
+    "parserOptions": {
+      "parser": "babel-eslint"
     },
-    "license": "MIT",
-    "author": "Start Bootstrap",
-    "contributors": [
-        "David Miller (https://davidmiller.io/)"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/StartBootstrap/startbootstrap-agency.git"
-    },
-    "dependencies": {
-        "bootstrap": "4.5.3",
-        "vue": "^3.0.7"
-    },
-    "devDependencies": {
-        "autoprefixer": "10.0.1",
-        "browser-sync": "^2.26.14",
-        "chokidar": "3.4.3",
-        "concurrently": "5.3.0",
-        "postcss": "8.1.4",
-        "prettier": "2.1.2",
-        "pug": "^3.0.2",
-        "sass": "1.28.0",
-        "shelljs": "0.8.4"
-    }
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
 }
