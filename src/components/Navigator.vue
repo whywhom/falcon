@@ -26,8 +26,8 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss">
-@import "../scss/styles.scss";
+<style>
+@import "../../static/css/styles.css";
 </style>
 <style scoped>
 </style>
