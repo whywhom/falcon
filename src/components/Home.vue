@@ -1,18 +1,14 @@
 <template>
-  <div class="header">
-  <b-nav align="right">
-    <b-nav-item active>Home</b-nav-item>
-    <b-nav-item>Products</b-nav-item>
-    <b-nav-item>About us</b-nav-item>
-    <b-nav-item>Contact us</b-nav-item>
-  </b-nav>
+  <div class="home">
+    <Carousel/>
   </div>
 </template>
 
 <script>
+import Carousel from '@/components/Carousel'
 export default {
-  name: 'header',
-  components: {},
+  name: 'hello',
+  components: {Carousel},
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
