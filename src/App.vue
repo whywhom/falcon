@@ -1,8 +1,10 @@
 <template>
   <div id="app">
-    <Header/>
-    <router-view></router-view>
-    <Footer/>
+    <el-container>
+      <el-header height="100px"><Header/></el-header>
+      <el-main><router-view></router-view></el-main>
+      <el-footer><Footer/></el-footer>
+    </el-container>
   </div>
 </template>
 
