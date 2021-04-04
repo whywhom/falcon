@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-row type="flex" class="row-bg" justify="space-between">
+    <el-row type="flex" class="header-row-bg" justify="space-between">
       <el-col>
         <div class="block" align=left key="fit">
           <el-image
@@ -65,7 +65,7 @@
     border-radius: 4px;
     min-height: 36px;
   }
-  .row-bg {
+  .header-row-bg {
     padding: 10px 0;
     background-color: #ffffff;
   }
