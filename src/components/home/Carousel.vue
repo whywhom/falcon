@@ -1,12 +1,62 @@
 <template>
-
-  <el-carousel :interval="5000" arrow="always">
-    <el-carousel-item v-for="item in items" :key="item">
-       <div class="item">
-        <img class="item_image" width="100%" v-bind:src="item" alt=""/>
-      </div>
-    </el-carousel-item>
-  </el-carousel>
+  <b-carousel
+      id="carousel-1"
+      v-model="slide"
+      :interval="4000"
+      controls
+      indicators
+      background="#ababab"
+      img-width="1024"
+      img-height="480"
+      style="text-shadow: 1px 1px 2px #333;"
+      @sliding-start="onSlideStart"
+      @sliding-end="onSlideEnd"
+    >
+    <b-carousel-slide>
+      <template #img>
+          <img
+            class="d-block img-fluid w-100"
+            width="1024"
+            height="480"
+            v-bind:src="items[0]"
+            alt="image"
+          >
+        </template>
+    </b-carousel-slide>
+    <b-carousel-slide>
+      <template #img>
+          <img
+            class="d-block img-fluid w-100"
+            width="1024"
+            height="480"
+            v-bind:src="items[1]"
+            alt="image"
+          >
+        </template>
+    </b-carousel-slide>
+    <b-carousel-slide>
+      <template #img>
+          <img
+            class="d-block img-fluid w-100"
+            width="1024"
+            height="480"
+            v-bind:src="items[2]"
+            alt="image"
+          >
+        </template>
+    </b-carousel-slide>
+    <b-carousel-slide>
+      <template #img>
+          <img
+            class="d-block img-fluid w-100"
+            width="1024"
+            height="480"
+            v-bind:src="items[3]"
+            alt="image"
+          >
+        </template>
+    </b-carousel-slide>
+  </b-carousel>
 </template>
 
 <script>
@@ -35,19 +85,4 @@
 </script>
 
 <style>
-  .el-carousel__item h3 {
-    color: #475669;
-    font-size: 18px;
-    opacity: 0.75;
-    line-height: 300px;
-    margin: 0;
-  }
-
-  .el-carousel__item:nth-child(2n) {
-    background-color: #99a9bf;
-  }
-
-  .el-carousel__item:nth-child(2n+1) {
-    background-color: #d3dce6;
-  }
 </style>

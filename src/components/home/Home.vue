@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Carousel/>
+    <Carousel class="carousel"/>
     <Products/>
     <About/>
   </div>
@@ -39,5 +39,11 @@ li {
 
 a {
   color: #42b983;
+}
+
+.carousel {
+  min-height: 480px;
+  height: 100%;
+  width: 100%;
 }
 </style>

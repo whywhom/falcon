@@ -2,7 +2,7 @@
   <div>
     <h1>Products</h1>
   <el-row>
-  <el-col :span="8" v-for="index in products" :key="index" :offset="index > 0 ? 2 : 0">
+  <el-col :span="6" v-for="index in products" :key="index" :offset="index.id > 0 ? 3 : 0">
     <el-card :body-style="{ padding: '0px' }">
       <img v-bind:src="index.pic" class="image">
       <div style="padding: 14px;">
@@ -25,10 +25,17 @@
         currentDate: new Date(),
         products: [
           {
+            id: 0,
             name: 'Pet Tracker',
             pic: require('@/assets/image/pet-tracker-thumbnail.jpg')
           },
           {
+            id: 1,
+            name: 'Dash Camera',
+            pic: require('@/assets/image/dash-camera-thumbnail.jpg')
+          },
+          {
+            id: 2,
             name: 'Dash Camera',
             pic: require('@/assets/image/dash-camera-thumbnail.jpg')
           }
