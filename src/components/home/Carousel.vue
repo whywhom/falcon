@@ -7,7 +7,7 @@
       indicators
       background="#ababab"
       img-width="1024"
-      img-height="480"
+      img-height="300"
       style="text-shadow: 1px 1px 2px #333;"
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
@@ -17,7 +17,7 @@
           <img
             class="d-block img-fluid w-100"
             width="1024"
-            height="480"
+            height="300"
             v-bind:src="items[0]"
             alt="image"
           >
@@ -28,7 +28,7 @@
           <img
             class="d-block img-fluid w-100"
             width="1024"
-            height="480"
+            height="300"
             v-bind:src="items[1]"
             alt="image"
           >
@@ -39,7 +39,7 @@
           <img
             class="d-block img-fluid w-100"
             width="1024"
-            height="480"
+            height="300"
             v-bind:src="items[2]"
             alt="image"
           >
@@ -50,7 +50,7 @@
           <img
             class="d-block img-fluid w-100"
             width="1024"
-            height="480"
+            height="300"
             v-bind:src="items[3]"
             alt="image"
           >
@@ -66,10 +66,10 @@
         slide: 0,
         sliding: null,
         items: [
-          'https://picsum.photos/1024/480/?image=52',
-          'https://picsum.photos/1024/480/?image=54',
-          'https://picsum.photos/1024/480/?image=58',
-          'https://picsum.photos/1024/480/?image=55'
+          'https://picsum.photos/1024/300/?image=2',
+          'https://picsum.photos/1024/300/?image=4',
+          'https://picsum.photos/1024/300/?image=8',
+          'https://picsum.photos/1024/300/?image=5'
         ]
       }
     },
