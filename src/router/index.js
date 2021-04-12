@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import About from '@/components/About'
+import About from '@/components/about/About'
 import Home from '@/components/home/Home'
-import Contact from '@/components/Contact'
-import Products from '@/components/Products'
+import Contact from '@/components/contact/Contact'
+import Products from '@/components/products/Products'
 Vue.use(Router)
 
 export default new Router({

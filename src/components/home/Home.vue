@@ -1,18 +1,22 @@
 <template>
   <div class="home">
+    <Header/>
     <Carousel class="carousel"/>
     <Products/>
     <About/>
+    <Footer/>
   </div>
 </template>
 
 <script>
+import Header from '@/components/home/Header'
+import Footer from '@/components/home/Footer'
 import Carousel from '@/components/home/Carousel'
 import Products from '@/components/home/Products'
 import About from '@/components/home/About'
 export default {
   name: 'hello',
-  components: {Carousel, Products, About},
+  components: {Header, Footer, Carousel, Products, About},
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'

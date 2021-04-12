@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <el-container>
-      <el-header height="100px"><Header/></el-header>
+      <!-- <el-header><Header/></el-header> -->
       <el-main><router-view></router-view></el-main>
-      <el-footer><Footer/></el-footer>
+      <!-- <el-footer><Footer/></el-footer> -->
     </el-container>
   </div>
 </template>

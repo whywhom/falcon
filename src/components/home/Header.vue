@@ -29,7 +29,7 @@
         activeIndex: '1',
         activeIndex2: '1',
         fit: 'scale-down',
-        url: require('../../static/image/favicon.png')
+        url: require('../../../static/image/favicon.png')
       }
     },
     methods: {
