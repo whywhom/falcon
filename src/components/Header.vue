@@ -1,61 +1,64 @@
 <template>
-  <div>
-    <el-row type="flex" class="header-row-bg" justify="space-between">
-      <el-col>
-        <div class="block" align=left key="fit">
-          <el-image
-            style="width: 100px"
-            :src="url"
-            :fit="fit"></el-image>
+  <div class="fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            v-bind:src="logo"
+            alt=""
+            width="100"
+            height="66"
+            class="d-inline-block align-middle"
+          />
+          Bootstrap
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="justify-content-end collapse navbar-collapse"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">About us</a>
+            </li>
+          </ul>
         </div>
-      </el-col>
-      <el-col :span="8">
-        <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-            <el-menu-item index="1"><router-link to="/">Home</router-link></el-menu-item>
-            <el-menu-item index="2"><router-link to="/About">Products</router-link></el-menu-item>
-            <el-menu-item index="3"><router-link to="/About">About us</router-link></el-menu-item>
-            <el-menu-item index="4"><router-link to="/Contact">Contact us</router-link></el-menu-item>
-          </el-menu>
-      </el-col>
-    </el-row>
-    
+      </div>
+    </nav>
   </div>
 </template>
 
 <script>
-  export default {
-    data () {
-      return {
-        activeIndex: '1',
-        activeIndex2: '1',
-        fit: 'scale-down',
-        url: require('../../static/image/favicon.png')
-      }
-    },
-    methods: {
-      handleSelect (key, keyPath) {
-        console.log(key, keyPath)
-      }
-    }
-  }
+export default {
+  name: "Header",
+  props: {
+    msg: String,
+  },
+  data() {
+    return {
+      logo: require("../assets/logo.jpg"),
+    };
+  },
+};
 </script>
 
-<style>
-  .el-row {
-    margin-bottom: 20px;
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-  .el-col {
-    border-radius: 4px;
-  }
-  .grid-content {
-    border-radius: 4px;
-    min-height: 36px;
-  }
-  .header-row-bg {
-    padding: 10px 0;
-    background-color: #ffffff;
-  }
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+
 </style>

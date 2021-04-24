@@ -1,25 +1,33 @@
 <template>
   <div id="app">
-    <el-container>
-      <!-- <el-header><Header/></el-header> -->
-      <el-main><router-view></router-view></el-main>
-      <!-- <el-footer><Footer/></el-footer> -->
-    </el-container>
+    <Header msg="Welcome to Falcon"/>
+    <Carousel msg="Carousel"/>
+    <Products msg="Products"/>
+    <img alt="Vue logo" src="./assets/logo.png">
+    <About msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+import Header from './components/Header.vue'
+import Carousel from './components/Carousel.vue'
+import Products from './components/Products.vue'
+import About from './components/About.vue'
+
 export default {
-  name: 'app',
-  components: {Header, Footer}
+  name: 'App',
+  components: {
+    Header,
+    Carousel,
+    Products,
+    About
+  }
 }
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
