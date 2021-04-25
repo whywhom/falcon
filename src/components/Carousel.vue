@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mt-5" >
     <b-carousel
       id="carousel-1"
       v-model="slide"
@@ -7,8 +7,8 @@
       controls
       indicators
       background="#ababab"
-      img-width="1500"
-      img-height="575"
+      img-width="1000"
+      img-height="400"
       style="text-shadow: 1px 1px 2px #333;"
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
@@ -18,8 +18,8 @@
         <template #img>
           <img
             class="d-block img-fluid w-100"
-            width="1500"
-            height="575"
+            width="1000"
+            height="400"
             v-bind:src="slide01"
             alt="image slot"
           >
@@ -30,8 +30,8 @@
         <template #img>
           <img
             class="d-block img-fluid w-100"
-            width="1500"
-            height="575"
+            width="1000"
+            height="400"
             v-bind:src="slide02"
             alt="image slot"
           >
@@ -44,8 +44,8 @@
         <template #img>
           <img
             class="d-block img-fluid w-100"
-            width="1500"
-            height="575"
+            width="1000"
+            height="400"
             v-bind:src="slide03"
             alt="image slot"
           >
@@ -65,9 +65,9 @@ export default {
     return {
       slide: 0,
       sliding: null,
-      slide01: require("../assets/image/01.jpg"),
-      slide02: require("../assets/image/02.jpg"),
-      slide03: require("../assets/image/03.jpg"),
+      slide01: require("../assets/image/banner/01.jpg"),
+      slide02: require("../assets/image/banner/02.jpg"),
+      slide03: require("../assets/image/banner/03.jpg"),
     }
   }
 }

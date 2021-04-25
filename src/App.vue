@@ -1,10 +1,10 @@
 <template>
-  <div id="app">
+  <div class="container-fluid" id="app">
     <Header msg="Welcome to Falcon"/>
     <Carousel msg="Carousel"/>
     <Products msg="Products"/>
-    <img alt="Vue logo" src="./assets/logo.png">
-    <About msg="Welcome to Your Vue.js App"/>
+    <About msg="About us"/>
+    <Footer msg="Footer"/>
   </div>
 </template>
 
@@ -13,21 +13,22 @@ import Header from './components/Header.vue'
 import Carousel from './components/Carousel.vue'
 import Products from './components/Products.vue'
 import About from './components/About.vue'
-
+import Footer from './components/Footer.vue'
 export default {
   name: 'App',
   components: {
     Header,
     Carousel,
     Products,
-    About
+    About,
+    Footer
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Avenir, Helvetica, Arial, sans-serif, font-monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
