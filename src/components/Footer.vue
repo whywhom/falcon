@@ -1,46 +1,27 @@
 <template>
-  <div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img
-            v-bind:src="logo"
-            alt=""
-            width="120"
-            height="80"
-            class="d-inline-block align-middle"
-          />
-          Falcon
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="justify-content-end collapse navbar-collapse"
-          id="navbarSupportedContent"
-        >
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active nav-link js-scroll-trigger" href="#product_page">Products</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#about_us">About us</a>
-            </li>
-          </ul>
+  <div class="bg-info">
+    <div class="footer">
+      <div class="row justify-content-around align-items-stretch text-light">
+        <div class="col-3 text-justify">
+          <div class="col">Phone: +86 755 27889564</div>
+          <div class="col">Mobile phone: +86 18922872901</div>
+          <div class="col">Fax: +86 755 27889564</div>
+        </div>
+        <div class="col-3 text-justify">
+          <div class="col">Website: https://www.gocampingday.com</div>
+          <div class="col">Email: sales@falcon-technology.cn</div>
+          <div class="col">Email: ellen@falcon-technology.cn</div>
+        </div>
+        <div class="col-3 text-justify">
+          <div class="col">
+            Address: Room 348, Nuobo Plaza, 269 Qianjin 1st Road, Wenhui
+            community, Xinan streent, Bao’an District, Shenzhen, Guangdong,China
+          </div>
         </div>
       </div>
-    </nav>
+      <hr color="gray">
+      <p class="text-center text-light mt-2">Copyright © Falcon 2021</p>
+    </div>
   </div>
 </template>
 
@@ -51,14 +32,15 @@ export default {
     msg: String,
   },
   data() {
-    return {
-      logo: require("../assets/logo.png"),
-    };
+    return {};
   },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+.footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
 </style>

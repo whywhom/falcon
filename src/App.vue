@@ -2,8 +2,11 @@
   <div class="container-fluid" id="app">
     <Header msg="Welcome to Falcon"/>
     <Carousel msg="Carousel"/>
+    <Gaps msg="Gaps"/>
     <Products msg="Products"/>
+    <Gaps msg="Gaps"/>
     <About msg="About us"/>
+    <Gaps msg="Gaps"/>
     <Footer msg="Footer"/>
   </div>
 </template>
@@ -14,6 +17,7 @@ import Carousel from './components/Carousel.vue'
 import Products from './components/Products.vue'
 import About from './components/About.vue'
 import Footer from './components/Footer.vue'
+import Gaps from './components/Gaps.vue'
 export default {
   name: 'App',
   components: {
@@ -21,7 +25,8 @@ export default {
     Carousel,
     Products,
     About,
-    Footer
+    Footer,
+    Gaps
   }
 }
 </script>

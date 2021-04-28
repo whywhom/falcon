@@ -6,7 +6,7 @@
       <img v-bind:src="location" alt="..." />
     </div>
     <div class="col-4 align-self-center">
-      <p class="font-monospace text-justify fw-lighter">
+      <p class="font-monospace text-justify fw-lighter text-muted">
         Shenzhen Falcon Technology Co., Ltd. was founded in 2005. We are a
         hi-tech company engaged in the R&D, production and distribution of
         proprietary intellectual property products, such as digital products,
@@ -14,14 +14,14 @@
         innovation, quality, one-stop services and social responsibility, we
         have become a reliable OEM/ODM partner. 
       </p>
-      <p class="text-justify fw-lighter">
+      <p class="text-justify fw-lighter text-muted">
         Innovation is one of the reasons
         why we stand out in the competition. Thanks to our talented engineers
         and continual investment in R&D, we manage all processes in our
         5,000-square-meter facilities according to ISO9001:2008 and IS14001:2009
         certificates. Our goods bear CE, FCC and RoHS marks. 
       </p>
-      <p class="text-justify fw-lighter">
+      <p class="text-justify fw-lighter text-muted">
         We carry out all of
         our process in-house for quality consistency and low costs. Furthermore,
         utilizing our own R&D center, our engineers develop cutting-edge

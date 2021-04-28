@@ -1,6 +1,6 @@
 <template>
   <div class="fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg  bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img
