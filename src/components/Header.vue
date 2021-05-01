@@ -10,7 +10,7 @@
             height="80"
             class="d-inline-block align-middle"
           />
-          Falcon
+          <!-- Falcon -->
         </a>
         <button
           class="navbar-toggler"
