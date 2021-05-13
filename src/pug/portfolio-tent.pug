@@ -1,0 +1,95 @@
+doctype html
+html(lang='en')
+
+    head
+
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description', content='')
+        meta(name='author', content='')
+
+        title Falcon - Person Tent
+
+        // Favicon
+        link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
+
+        // Font Awesome icons (free version)
+        script(src='https://use.fontawesome.com/releases/v5.15.3/js/all.js', crossorigin='anonymous')
+
+        // Core theme CSS (includes Bootstrap)
+        link(href='css/styles.css', rel='stylesheet')
+
+    body
+
+        // Navigation
+        include includes/navbar.pug
+
+        // Page Content
+        section.py-5
+            .container
+                // Page Heading/Breadcrumbs
+                h1
+                    | Person Tent
+                    small  
+                ol.breadcrumb.mb-4
+                    li.breadcrumb-item
+                        a(href='index.html') Home
+                    li.breadcrumb-item.active Person Tent
+
+                // Portfolio Item Row
+                .row
+                    .col-md-8
+                        img.img-fluid(src='assets/img/product/tent.jpg', alt='...')
+                    .col-md-4
+                        h3.my-3 Project Description
+                        p
+                            | 2 PERSON TENT- This lightweight two-person dome tent with a large D-style door has enough space for you and a friend. This compact tent is ideal for hiking, camping, a kid’s indoor or backyard play tent, fishing, or shelter at the beach
+                        p
+                            | CONVIENENT FEATURES- The 2-man tent features fiberglass poles, a removable rain fly, ventilation, and an interior storage pocket to keep your contents neat and organized while enjoying the great outdoors
+                        p   
+                            | DUAL LAYER DOOR- The combination of the inner screen layer and the outer zippered fabric layer of the tent door provide plenty of air flow as well as privacy. Simply bind the doors back with the sewn in ties to let the breeze in and keep the bugs out
+                        P
+                            | EASY SET UP- With just 2 fiberglass poles, set up and tear down of this camping tent is quick and easy. When you are finished with your trip, you can simply place the tent components back into the included carrying bag to easily pack up and transport
+
+                        h3.my-3 Project Details
+                        ul
+                            li Material: 190T Polyester and Fiberglass.
+                            li Dimensions: (L) 77” x (W) 57” x (H) 40”.
+                            li Pole Diameter: 3mm.
+                            li Carry Bag: (L) 23” x 4” Diameter. 
+                            li Weight: 2.75lbs. 
+                            li Fits: 2 people. 
+                            li Color: Bold Blue
+                            
+
+        hr.my-0
+
+        // Related Projects Section
+        section.py-5.bg-light
+            .container
+                h2.mb-4 Related Projects
+                .row
+                    .col-md-3.col-sm-6.mb-4
+                        a(href='portfolio-camping-lantern.html')
+                            img.img-fluid(src='assets/img/product/camping_lantern.jpg', alt='...')
+                    .col-md-3.col-sm-6.mb-4
+                        a(href='portfolio-sleeping-bag.html')
+                            img.img-fluid(src='assets/img/product/sleeping_bag.jpg', alt='...')
+                    //- .col-md-3.col-sm-6.mb-4
+                    //-     a(href='#!')
+                    //-         img.img-fluid(src='https://via.placeholder.com/500x300', alt='...')
+                    //- .col-md-3.col-sm-6.mb-4
+                    //-     a(href='#!')
+                    //-         img.img-fluid(src='https://via.placeholder.com/500x300', alt='...')
+
+        // Footer
+        footer.py-5.bg-dark
+            .container
+                p.m-0.text-center.text-white Copyright &copy; Falcon 2021
+
+        // Bootstrap core JS
+        script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js')
+        script(src='https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js')
+
+        // Core theme JS
+        script(src='js/scripts.js')
