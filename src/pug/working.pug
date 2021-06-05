@@ -1,0 +1,74 @@
+doctype html
+html
+  style.
+    body, html {
+    height: 100%;
+    margin: 0;
+    }
+    
+    .bgimg {
+    background-image: url('/assets/img/underconstruction.jpg');
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 25px;
+    }
+    
+    .topleft {
+    position: absolute;
+    top: 0;
+    left: 16px;
+    }
+    
+    .bottomleft {
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+    }
+    
+    .middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    }
+    
+    hr {
+    margin: auto;
+    width: 40%;
+    }
+
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content='')
+    meta(name='author', content='')
+
+    title Modern Business - Start Bootstrap Template
+
+    // Favicon
+    link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
+
+    // Font Awesome icons (free version)
+    script(src='https://use.fontawesome.com/releases/v5.15.3/js/all.js', crossorigin='anonymous')
+
+    // Core theme CSS (includes Bootstrap)
+    link(href='css/styles.css', rel='stylesheet')
+
+  body
+    Navigation
+        include includes/navbar.pug
+
+    .bgimg
+      .topleft
+        p Logo
+      .middle
+        h1 COMING SOON
+        hr
+        p 30 days left
+      .bottomleft
+        p By living your life one day at a time, you live all the days of your life.
