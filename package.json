@@ -36,7 +36,8 @@
         "url": "https://github.com/StartBootstrap/startbootstrap-modern-business.git"
     },
     "dependencies": {
-        "bootstrap": "4.6.0"
+        "bootstrap": "4.6.0",
+        "bootstrap-icons": "^1.5.0"
     },
     "devDependencies": {
         "autoprefixer": "10.2.5",
