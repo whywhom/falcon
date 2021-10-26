@@ -5,7 +5,7 @@ CREATE TABLE   IF NOT EXISTS  `company` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `company` set c_name='Falcon', c_info='{
+INSERT INTO company(c_name,c_info) SELECT 'Falcon', '{
     "name": "Falcon",
     "address": {
         "street": "Room 348, Nuobo Plaza, 269 Qianjin 1st Road,",
@@ -28,4 +28,4 @@ INSERT INTO `company` set c_name='Falcon', c_info='{
             }
         ]
     }
-}';
+}' FROM DUAL WHERE NOT EXISTS(SELECT c_name FROM company WHERE c_name = 'Falcon'); 

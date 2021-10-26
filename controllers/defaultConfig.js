@@ -3,10 +3,10 @@ const config = {
     // 数据库配置
     database: {
         DATABASE: 'falconDb', //数据库名称
-        USERNAME: 'falconAdmin', //mysql用户名
-        PASSWORD: 'qazwsxedc123', //mysql密码
+        USERNAME: 'root', //mysql用户名falconAdmin
+        PASSWORD: 'qazwsxedc123', //mysql密码qazwsxedc123
         PORT: '3306', //mysql端口号
-        HOST: '127.0.0.1' //服务器ip
+        HOST: 'localhost' //服务器ip
     }
 }
 

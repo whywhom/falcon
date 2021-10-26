@@ -11,4 +11,4 @@ CREATE TABLE   IF NOT EXISTS  `user` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `user` set email='falcon@alibaba.com', password='qazwsxedc123';
+INSERT INTO user(email,password) SELECT 'falcon@alibaba.com', 'qazwsxedc123' FROM DUAL WHERE NOT EXISTS(SELECT email FROM user WHERE email = 'falcon@alibaba.com');

@@ -6,7 +6,7 @@ CREATE TABLE   IF NOT EXISTS  `product` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `product` set name='Camping Lantern', price='0',p_info='{
+INSERT INTO product(name,price,p_info) SELECT 'Camping Lantern', '0','{
     "name": "Camping Lantern",
     "price": "0",
     "Project Description": [
@@ -69,4 +69,4 @@ INSERT INTO `product` set name='Camping Lantern', price='0',p_info='{
             "value": "1x Charger Cable (AC)"
         }
     ]
-}';
+}' FROM DUAL WHERE NOT EXISTS(SELECT name FROM product WHERE name = 'Camping Lantern');
