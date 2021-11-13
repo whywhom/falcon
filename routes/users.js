@@ -21,6 +21,7 @@ router.get('/login', function (ctx, next){
   `
 })
 
+
 // 增加响应表单请求的路由
 router.post('/register',async(ctx, next)=>{
   let {name, password} = ctx.request.body

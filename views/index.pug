@@ -1,5 +1,232 @@
-extends layout
+doctype html
+html(lang='en')
 
-block content
-  h1= title
-  p Welcome to #{title}
+    head
+
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description', content='')
+        meta(name='author', content='Magicode')
+
+        title Falcon
+
+        // Favicon
+        link(rel='icon', type='image/x-icon', href='images/favicon.ico')
+
+        script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js', integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN", crossorigin='anonymous')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js", integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4", crossorigin="anonymous")
+        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js", integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1", crossorigin="anonymous")
+        // Font Awesome icons (free version)
+        script(src='https://use.fontawesome.com/releases/v5.15.3/js/all.js', crossorigin='anonymous')
+        
+        link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous")
+        
+        // Core theme CSS (includes Bootstrap)
+        link(href='stylesheets/styles.css', rel='stylesheet')
+
+    body
+
+        // Navigation
+        include includes/navbar.pug
+
+        // Page header carousel
+        header
+            #carouselExampleIndicators.carousel.slide(data-ride='carousel')
+                ol.carousel-indicators
+                    li.active(data-target='#carouselExampleIndicators', data-slide-to='0')
+                    li(data-target='#carouselExampleIndicators', data-slide-to='1')
+                    li(data-target='#carouselExampleIndicators', data-slide-to='2')
+                .carousel-inner
+                    .carousel-item.active
+                        img.d-block.w-100(src='images/banner/01.jpg', alt='...')
+                        .carousel-caption.d-none.d-md-block
+                            h3 
+                            p 
+                    .carousel-item
+                        img.d-block.w-100(src='images/banner/02.jpg', alt='...')
+                        .carousel-caption.d-none.d-md-block
+                            h3 
+                            p 
+                    .carousel-item
+                        img.d-block.w-100(src='images/banner/03.jpg', alt='...')
+                        .carousel-caption.d-none.d-md-block
+                            h3 
+                            p  
+                a.carousel-control-prev(href='#carouselExampleIndicators', role='button', data-slide='prev')
+                    span.carousel-control-prev-icon(aria-hidden='true')
+                    span.sr-only Previous
+                a.carousel-control-next(href='#carouselExampleIndicators', role='button', data-slide='next')
+                    span.carousel-control-next-icon(aria-hidden='true')
+                    span.sr-only Next
+
+        // Page Content
+        //- section.py-5
+        //-     .container
+        //-         h1.mb-4 Welcome to Modern Business
+
+        //-         // Marketing Icons Section
+        //-         .row
+        //-             .col-lg-4.mb-4.mb-lg-0
+        //-                 .card.h-100
+        //-                     h4.card-header Card Title
+        //-                     .card-body
+        //-                         p.card-text
+        //-                             | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.
+        //-                     .card-footer
+        //-                         a.btn.btn-primary(href='#!') Learn More
+        //-             .col-lg-4.mb-4.mb-lg-0
+        //-                 .card.h-100
+        //-                     h4.card-header Card Title
+        //-                     .card-body
+        //-                         p.card-text
+        //-                             | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam eos, nam perspiciatis natus commodi similique totam consectetur praesentium molestiae atque exercitationem ut consequuntur, sed eveniet, magni nostrum sint fuga.
+        //-                     .card-footer
+        //-                         a.btn.btn-primary(href='#!') Learn More
+        //-             .col-lg-4
+        //-                 .card.h-100
+        //-                     h4.card-header Card Title
+        //-                     .card-body
+        //-                         p.card-text
+        //-                             | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.
+        //-                     .card-footer
+        //-                         a.btn.btn-primary(href='#!') Learn More
+
+        //- hr.my-0
+
+        // Portfolio Section
+        section.py-5.bg-light
+            .container
+                h2.mb-4 Products
+                .row
+                    .col-lg-4.col-sm-6.mb-4
+                        .card.h-100
+                            a(href='portfolio-tent.html')
+                                img.card-img-top(src='images/product/tent.jpg', alt='...')
+                            .card-body
+                                h4.card-title
+                                    a(href='portfolio-tent.html') Person Tent
+                                p.card-text
+                                    | His lightweight two-person dome tent with a large D-style door has enough space for you and a friend.
+                    .col-lg-4.col-sm-6.mb-4
+                        .card.h-100
+                            a(href='portfolio-sleeping-bag.html')
+                                img.card-img-top(src='images/product/sleeping_bag.jpg', alt='...')
+                            .card-body
+                                h4.card-title
+                                    a(href='portfolio-sleeping-bag.html') Sleeping Bag
+                                p.card-text
+                                    | Our bag is more comfortable than the competition due to more padding and cushioning inside to make sure you are well rested and fully re-energized.
+                    .col-lg-4.col-sm-6.mb-4
+                        .card.h-100
+                            a(href='portfolio-camping-lantern.html')
+                                img.card-img-top(src='images/product/camping_lantern.jpg', alt='...')
+                            .card-body
+                                h4.card-title
+                                    a(href='portfolio-camping-lantern.html') Camping Lantern
+                                p.card-text
+                                    | High quality plastic shell, glass top, stainless steel hand shanks, shockproof and durable. Put the lamp in the sun, it will be charged, 3 hours lighting once fully charged.
+                    
+        hr.my-0
+
+        // Features Section
+        section.py-5
+            .container
+                .row.align-items-center
+                    .col-lg-6
+                        h2.mb-4 About Us
+                        p 
+                        | Shenzhen Falcon technology Co.,ltd is a factory mainly engages in designing, developing and producing camping products such as Camping Tents, Sleeping Pads, Sleeping Bags, also we have cooperation factory for Solar panels and so on. Exported to United States. Europe, Oceania, South America, Middle East, Southeast Asia and so on. 
+                        p
+                    
+                            li 6 years professional experience in manufacturing and exporting.
+                            
+                            li With technicians specialize in camping products more than 20 year
+    
+                            li OEM, ODM accepted. 
+
+                            li 100% Strict Quality Control, with own inspecting room.
+
+                            li Fast & Cheap Delivery: We have big discount from forwarder (Long Contract) because we delivery everyday.
+
+                            li Good Service: 24 hour hot line, service more swiftly.
+                        //- ul
+                        //-     li
+                        //-         strong Bootstrap 4.6.0
+                        //-     li jQuery 3.5.1
+                        //-     li Font Awesome 5.15.3
+                        //-     li Working PHP contact form with validation
+                        //-     li Unstyled page elements for easy customization
+                        //- p
+                        //-     | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.
+                    .col-lg-6
+                        img.img-fluid.rounded(src='images/about/company-building.jpg', alt='...')
+
+        hr.my-0
+
+        // Call to Action
+        //- aside.py-5.bg-light
+        //-     .container
+        //-         .row
+        //-             .col-md-6
+        //-                 p
+        //-                 | Phone: +86 755 27889564
+        //-                 p
+        //-                 | Mobile phone: +86 18922872901
+        //-                 p
+        //-                 | Fax: +86 755 27889564
+        //-             .col-md-6
+        //-                 p
+        //-                 | Website: https://www.gocampingday.com
+        //-                 p
+        //-                 | Email: sales@falcon-technology.cn
+        //-                 p
+        //-                 | Email: ellen@falcon-technology.cn
+                    //- .col-md-4
+                    //-     a.btn.btn-lg.btn-secondary.btn-block(href='#!') Call to Action
+
+        // Page Content
+        section.py-5.bg-dark
+            .container
+                // Contact Form
+                // In order to set the email address and subject line for the contact form go to the assets/mail/contact_me.php file.
+                .row.align-items-center
+                    .col-lg-6
+                        img.img-fluid.rounded(src='images/index/contact-logo.jpg', alt='...')
+
+                    .col-lg-6.mb-4
+                        h3.text-white For any questions, contact us directly!
+                        form(action="/sendMsg" method="POST")
+                            //-#contactForm(name='sentMessage', novalidate")
+                            //- .control-group.form-group
+                            //-     .controls
+                            //-         label.text-white Full Name:
+                            //-         input#name.form-control(type='text', required data-validation-required-message='Please enter your name.')
+                            //-         p.help-block
+                            //- .control-group.form-group
+                            //-     .controls
+                            //-         label.text-white Phone Number:
+                            //-         input#phone.form-control(type='tel', required data-validation-required-message='Please enter your phone number.')
+                            .control-group.form-group
+                                .controls
+                                    label.text-white Email Address:
+                                    input#email.form-control(type='email', name="email", required data-validation-required-message='Please enter your name.', placeholder='Please enter your email address.')
+                            .control-group.form-group
+                                .controls
+                                    label.text-white Message:
+                                    textarea#message.form-control(type='text', name="message", required data-validation-required-message='Please enter your message.', rows='10', cols='100', placeholder='Please enter your message', maxlength='999', style='resize:none')
+                            #success
+                            // For success/fail messages
+                            button#sendMessageButton.btn.btn-primary(type='submit') Send Message
+        // Footer
+        include includes/footer.pug
+
+        footer.py-5.bg-dark
+            .container
+                p.m-0.text-center.text-white Copyright &copy; Falcon 2021
+
+        // Bootstrap core JS
+        script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js')
+        script(src='https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js')
+
+        // Core theme JS
+        //- script(src='javascripts/scripts.js')
