@@ -21,6 +21,12 @@ router.get('/json', async (ctx, next) => {
 router.post('/sendMsg',async(ctx, next)=>{
   let {email, message} = ctx.request.body
   if( email != null && message != null ){
+      await sendEmail(email, message)
+  }
+})
+
+async function sendEmail(email, message) {
+  if( email != null && message != null ){
 
     let transporter = nodemailer.createTransport({
       // host: 'smtp.ethereal.email',
@@ -44,7 +50,7 @@ router.post('/sendMsg',async(ctx, next)=>{
     };
     
     // send mail with defined transport object
-    transporter.sendMail(mailOptions, (error, info) => {
+    let info = transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
         ctx.response.body = {
           code: 200,
@@ -56,17 +62,16 @@ router.post('/sendMsg',async(ctx, next)=>{
         code: 200,
         message: 'Mail sent successfully!'
       }
-      console.log('Message sent: %s', info.messageId);
-      // Message sent: <04ec7731-cc68-1ef6-303c-61b0f796b78f@qq.com>
+      return console.log('Message sent: %s', info.messageId);
     });
     // ctx.redirect('/datainit');
   }else{
     ctx.body = {
       code: 500,
       message: 'Something went wrong!'
+    }
+    console.log('Something went wrong!')
   }
-  console.log('Something went wrong!')
-  }
-})
+}
 
 module.exports = router

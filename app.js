@@ -9,7 +9,10 @@ const logger = require('koa-logger')
 const staticPath = require('koa-static')
 
 const index = require('./routes/index')
+const about = require('./routes/about')
 const users = require('./routes/users')
+const contact = require('./routes/contact')
+const product = require('./routes/product')
 
 // error handler
 onerror(app)
@@ -37,6 +40,9 @@ app.use(async (ctx, next) => {
 // routes
 app.use(index.routes(), index.allowedMethods())
 app.use(users.routes(), users.allowedMethods())
+app.use(about.routes(), about.allowedMethods())
+app.use(contact.routes(), contact.allowedMethods())
+app.use(product.routes(), product.allowedMethods())
 
 // error-handling
 app.on('error', (err, ctx) => {
